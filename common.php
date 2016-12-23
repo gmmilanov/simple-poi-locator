@@ -1,26 +1,23 @@
 <?php
 
 /*Database settings*/
-#database host
+// database host
 define('DBHOST', 'localhost');
-#database name
+// database name
 define('DBNAME', 'spl');
-#database user
+// database user
 define('DBUSER', 'spl');
-#database password
+// database password
 define('DBPASS', 'spl');
 
 function earth_radius($msr = 0)
-{   
+{
     $msr = (int)$msr;
-    if ($msr === 0)
-    {
-    	// miles
+    if ($msr === 0) {
+        // miles
         return 3959;
-    }
-    elseif ($msr === 1) 
-    {
-    	//kilometers
+    } elseif ($msr === 1) {
+        //kilometers
         return 6371;
     }
 }

@@ -67,13 +67,4 @@
     return setTimeout(callback, timeout);
   });
 
-
-  /*
-  Lng:-0.3908627 Lat:51.6722505
-  Lng:-0.3908627 Lat:51.6722505
-  Lng:-0.3908627 Lat:51.6722505
-  Lng:-0.3887132 Lat:51.6641152
-  Lng:-0.3887169 Lat:51.664111399999996
-   */
-
 }).call(this);

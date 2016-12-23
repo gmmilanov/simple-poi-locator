@@ -1,25 +1,25 @@
 lat = 37.4204
-lng = -122.1031 
-timeout = 5000 
+lng = -122.1031
+timeout = 5000
 
 #settings
 radius = 5
 limit = 20
 msr = 1
+#cookie exp.
+exp_days = 365
 
-exp_days = 365    
-
-if not getCookie 'unit' 
+if not getCookie 'unit'
     setCookie 'unit', unit, exp_days
-else 
+else
     unit = getCookie 'unit'
 
-if  not getCookie 'radius' 
+if  not getCookie 'radius'
     setCookie 'radius' , radius, exp_days
 else
-    radius = getCookie 'radius'    
+    radius = getCookie 'radius'
 
-if  not getCookie 'msr' 
+if  not getCookie 'msr'
     setCookie 'msr' , msr, exp_days
 else
     msr = getCookie 'msr'
@@ -42,7 +42,7 @@ $ ->
         url = "get/#{lat}/#{lng}/#{radius}/#{limit}/#{msr}"
         $.getJSON url, (data) ->
             console.log data
-            context = shops : data 
+            context = shops : data
             html = template context
             $('#shops-table').html html
 
@@ -54,13 +54,3 @@ $ ->
         window.location.href = url
 
     setTimeout callback, timeout
-###
-Lng:-0.3908627 Lat:51.6722505
-Lng:-0.3908627 Lat:51.6722505
-Lng:-0.3908627 Lat:51.6722505
-Lng:-0.3887132 Lat:51.6641152
-Lng:-0.3887169 Lat:51.664111399999996
-###
-
-        
-
